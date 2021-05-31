@@ -18,8 +18,6 @@ class IndecisionApp extends React.Component {
   }
 
   componentDidMount() {
-    console.log('CDM');
-
     try {
       let json = localStorage.getItem('optioins');
       const options = JSON.parse(json);
@@ -37,7 +35,6 @@ class IndecisionApp extends React.Component {
       localStorage.setItem('optioins', json);
       console.log('saving data');
     }
-    console.log('CDU');
   }
   handleDeleteOptions() {
     this.setState(() => ({ options: [] }));
